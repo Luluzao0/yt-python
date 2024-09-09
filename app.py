@@ -5,7 +5,7 @@ import os
 def download_youtube_video(url, output_path="."):
     try:
         ydl_opts = {
-            'format': 'best',  # Seleciona o melhor formato disponível que já inclui vídeo e áudio
+            'format': '18',  # Tenta baixar o vídeo em 360p que geralmente é menos restrito
             'outtmpl': f'{output_path}/%(title)s.%(ext)s',  # Template para o nome do arquivo de saída
         }
 
@@ -42,4 +42,4 @@ if st.button("Download video"):
                     mime="video/mp4"
                 )
     else:
-        st.warning("Por favor, insira uma URL válida do YouTube. / Please put a valid URL from yotube")
+        st.warning("Por favor, insira uma URL válida do YouTube. / Please put a valid URL from YouTube")
